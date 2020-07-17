@@ -14,11 +14,54 @@ $sql->bindParam(':password', $password);
 $sql->execute();
 
 $resultado = $sql->rowCount();
-$datos = $sql->fetchAll();
 
 if ($resultado == 1) {
+
+    $datos = $sql->fetchAll();
+
     $_SESSION['user'] = $datos[0]['identificacion'];
+    $_SESSION['tipo_user'] = 'usuario';
     header('location:../../../');
+
 } else {
-    header('location:./login.php?e=1');
+    $sql = $conexion->prepare('SELECT * from alumnos where identificacion = :identificacion and password = :password');
+    $sql->bindParam(':identificacion', $identificacion);
+    $sql->bindParam(':password', $password);
+    $sql->execute();
+
+    $resultado = $sql->rowCount();
+
+    if ($resultado == 1) {
+
+        $datos = $sql->fetchAll();
+
+        $_SESSION['user'] = $datos[0]['identificacion'];
+        $_SESSION['tipo_user'] = 'alumno';
+        header('location:../../../');
+
+    } else {
+        $sql = $conexion->prepare('SELECT * from profesores where identificacion = :identificacion and password = :password');
+        $sql->bindParam(':identificacion', $identificacion);
+        $sql->bindParam(':password', $password);
+        $sql->execute();
+
+        $resultado = $sql->rowCount();
+
+        if ($resultado == 1) {
+
+            $datos = $sql->fetchAll();
+
+            $_SESSION['user'] = $datos[0]['identificacion'];
+            $_SESSION['tipo_user'] = 'profesor';
+            header('location:../../../');
+
+        } else {
+            header('location:./login.php?e=1');
+        }
+    }
+
 }
+
+
+
+
