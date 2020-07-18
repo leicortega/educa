@@ -56,7 +56,26 @@ if ($resultado == 1) {
             header('location:../../../');
 
         } else {
-            header('location:../../../login.php?e=1');
+
+            $sql = $conexion->prepare('SELECT * from acudiente where identificacion = :identificacion and password = :password');
+            $sql->bindParam(':identificacion', $identificacion);
+            $sql->bindParam(':password', $password);
+            $sql->execute();
+    
+            $resultado = $sql->rowCount();
+
+            if ($resultado == 1) {
+                $datos = $sql->fetchAll();
+
+                $_SESSION['user'] = $datos[0]['identificacion'];
+                $_SESSION['tipo_user'] = 'acudiente';
+                header('location:../../../');
+
+            } else{
+
+                header('location:../../../login.php?e=1');
+            }
+            
         }
     }
 

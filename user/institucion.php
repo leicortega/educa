@@ -275,18 +275,22 @@ require ('../assets/php/validaciones/secure_login.php');
                 <div class="modal-body">
                     <div class="px-3">
 
-                        <form action="#">
+                        <form action="#" class="was-validated">
                             <div class="form-group">
-                                <label for="username">Name:</label>
-                                <input class="form-control" type="text" id="username" required="" placeholder="John Doe" />
+                                <label for="username">Nombre:</label>
+                                <input class="form-control" type="text" id="username" required="" placeholder="Nombre Institución" />
                             </div>
                             <div class="form-group">
-                                <label for="email">Email Address:</label>
-                                <input class="form-control" type="email" id="email" required="" placeholder="john@doe.com" />
+                                <label for="email">Correo:</label>
+                                <input class="form-control" type="email" id="email" required="" placeholder="institución@doe.com" />
                             </div>
                             <div class="form-group">
-                                <label for="password">Password:</label>
-                                <input class="form-control" type="password" required="" id="password" placeholder="Enter your password" />
+                                <label for="direccion">Dirección:</label>
+                                <input class="form-control" type="text" id="direccion" required="" placeholder="carrera 1 # 2-29" />
+                            </div>
+                            <div class="form-group">
+                                <label for="tel">Telefono:</label>
+                                <input class="form-control" type="tel" required="" id="tel" placeholder="Numero telefonico" />
                             </div>
                             <div class="form-group">
                                 <div class="custom-control custom-checkbox">
@@ -295,7 +299,7 @@ require ('../assets/php/validaciones/secure_login.php');
                                 </div>
                             </div>
                             <div class="form-group text-center">
-                                <button class="btn btn-primary" type="submit">Create Account</button>
+                                <button class="btn btn-primary" type="submit">Agregar Institución</button>
                             </div>
                         </form>
                     </div>
