@@ -20,7 +20,7 @@ if ($resultado == 1) {
     $datos = $sql->fetchAll();
 
     $_SESSION['user'] = $datos[0]['identificacion'];
-    $_SESSION['tipo_user'] = 'usuario';
+    $_SESSION['tipo_user'] = 'user';
     header('location:../../../');
 
 } else {
@@ -56,7 +56,7 @@ if ($resultado == 1) {
             header('location:../../../');
 
         } else {
-            header('location:./login.php?e=1');
+            header('location:../../../login.php?e=1');
         }
     }
 
