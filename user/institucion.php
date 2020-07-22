@@ -28,7 +28,7 @@ require ('../assets/php/validaciones/secure_login.php');
 
                     <div class="page__heading">
                         <div class="container-fluid page__container">
-                            <h1 class="mb-0">Dashboard</h1>
+                            <h1 class="mb-0">Institución</h1>
                         </div>
                     </div>
                     <div class="container-fluid page__container">
@@ -44,18 +44,18 @@ require ('../assets/php/validaciones/secure_login.php');
                                         <div class="table-responsive border-bottom" data-toggle="lists" data-lists-values='["js-lists-values-employee-name"]'>
 
                                             <div class="search-form search-form--light m-3">
-                                                <input type="text" class="form-control search" placeholder="Search">
+                                                <input type="text" class="form-control search" placeholder="Buscar">
                                                 <button class="btn" type="button"><i class="material-icons">search</i></button>
                                             </div>
 
                                             <table class="table mb-0 thead-border-top-0">
                                                 <thead>
                                                     <tr>
-                                                        <th>Name</th>
-                                                        <th style="width: 37px;">Status</th>
-                                                        <th style="width: 120px;">Last Activity</th>
-                                                        <th style="width: 51px;">Earnings</th>
-                                                        <th style="width: 24px;"></th>
+                                                        <th>Nombre</th>
+                                                        <th>Dirección</th>
+                                                        <th>Correo</th>
+                                                        <th>Telefono</th>
+                                                        <th></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody class="list" id="staff02">
@@ -63,14 +63,12 @@ require ('../assets/php/validaciones/secure_login.php');
 
                                                         <td>
 
-                                                            <span class="js-lists-values-employee-name">Michael Smith</span>
+                                                            <span class="js-lists-values-employee-name">INSTITUCIÓN</span>
 
                                                         </td>
-
-
-                                                        <td><span class="badge badge-warning">ADMIN</span></td>
-                                                        <td><small class="text-muted">3 days ago</small></td>
-                                                        <td>&dollar;12,402</td>
+                                                        <td><span class="js-lists-values-employee-name">CARRERA 1 A</span></td>
+                                                        <td><span class="js-lists-values-employee-name">CORREO@COR.COM</span></td>
+                                                        <td><span class="js-lists-values-employee-name">87649857</span></td>
                                                         <td><a href="" class="text-muted"><i class="material-icons">more_vert</i></a></td>
                                                     </tr>
                                                 </tbody>
@@ -268,7 +266,7 @@ require ('../assets/php/validaciones/secure_login.php');
         </app-settings>
     </div>
 
-    <!-- MODALES -->
+    <!-- MODAL REGISTRAR INSTITUCION -->
     <div id="modal-agregar" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
@@ -292,12 +290,12 @@ require ('../assets/php/validaciones/secure_login.php');
                                 <label for="tel">Telefono:</label>
                                 <input class="form-control" type="tel" required="" id="tel" placeholder="Numero telefonico" />
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="terms" />
                                     <label class="custom-control-label" for="terms">I accept <a href="#">Terms and Conditions</a></label>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="form-group text-center">
                                 <button class="btn btn-primary" type="submit">Agregar Institución</button>
                             </div>

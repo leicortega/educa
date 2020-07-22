@@ -98,6 +98,70 @@
 
             <?php } ?>
 
+            <?php if($_SESSION['tipo_user'] == 'acudiente') { ?>
+                <div class="sidebar-heading">acudiente</div>
+                <div class="sidebar-block p-0">
+                    <ul class="sidebar-menu mt-0">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="student-dashboard.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">star_half</i>
+                                <span class="sidebar-menu-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="student-courses.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">queue_play_next</i>
+                                <span class="sidebar-menu-text">Courses</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="student-course-purchase.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">shopping_cart</i>
+                                <span class="sidebar-menu-text">Purchase Course</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="student-lessons.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dns</i>
+                                <span class="sidebar-menu-text">Browse Lessons</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="student-quiz.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">live_help</i>
+                                <span class="sidebar-menu-text">Take Quiz</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="student-discussions.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">forum</i>
+                                <span class="sidebar-menu-text">Discussions</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="edit-account.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">settings</i>
+                                <span class="sidebar-menu-text">Edit Account</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="student-billing.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">monetization_on</i>
+                                <span class="sidebar-menu-text">Billing</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button" href="login.html">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">exit_to_app</i>
+                                <span class="sidebar-menu-text">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            <?php } ?>
+
+
+
             <?php if($_SESSION['tipo_user'] == 'profesor') { ?>
 
                 <div class="sidebar-heading">Author</div>

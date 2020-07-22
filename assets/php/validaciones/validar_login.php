@@ -8,12 +8,16 @@ $conexion = conexion();
 $identificacion = $_POST['identificacion'];
 $password = MD5($_POST['password']);
 
+//preparar la consulta
+
 $sql = $conexion->prepare('SELECT * from usuarios where identificacion = :identificacion and password = :password');
 $sql->bindParam(':identificacion', $identificacion);
 $sql->bindParam(':password', $password);
 $sql->execute();
 
 $resultado = $sql->rowCount();
+
+// validar la consulta
 
 if ($resultado == 1) {
 
