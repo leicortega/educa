@@ -35,6 +35,13 @@ require ('../assets/php/validaciones/secure_login.php');
                         <div class="tab-content">
 
                             <button type="button" class="btn btn-primary text-right mb-2" data-toggle="modal" data-target="#modal-agregar">Agregar +</button>
+
+                            <div class="alert alert-dismissible text-white border-0 fade show d-none" id="institucion-alert" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <strong id="content-alert"></strong>
+                            </div>
                             
                             <div class="card card-form">
                                 <div class="row no-gutters">
@@ -59,18 +66,7 @@ require ('../assets/php/validaciones/secure_login.php');
                                                     </tr>
                                                 </thead>
                                                 <tbody class="list" id="staff02">
-                                                    <tr>
-
-                                                        <td>
-
-                                                            <span class="js-lists-values-employee-name">INSTITUCIÓN</span>
-
-                                                        </td>
-                                                        <td><span class="js-lists-values-employee-name">CARRERA 1 A</span></td>
-                                                        <td><span class="js-lists-values-employee-name">CORREO@COR.COM</span></td>
-                                                        <td><span class="js-lists-values-employee-name">87649857</span></td>
-                                                        <td><a href="" class="text-muted"><i class="material-icons">more_vert</i></a></td>
-                                                    </tr>
+                                                    
                                                 </tbody>
                                             </table>
                                         </div>
@@ -270,25 +266,28 @@ require ('../assets/php/validaciones/secure_login.php');
     <div id="modal-agregar" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Agregar Institución</h3>
+                </div>
                 <div class="modal-body">
                     <div class="px-3">
 
-                        <form action="#" class="was-validated">
+                        <form action="#" class="was-validated" id="registrar_institucion_form">
                             <div class="form-group">
-                                <label for="username">Nombre:</label>
-                                <input class="form-control" type="text" id="username" required="" placeholder="Nombre Institución" />
+                                <label for="nombre">Nombre:</label>
+                                <input class="form-control" type="text" name="nombre" required="" placeholder="Nombre Institución" />
                             </div>
                             <div class="form-group">
-                                <label for="email">Correo:</label>
-                                <input class="form-control" type="email" id="email" required="" placeholder="institución@doe.com" />
+                                <label for="correo">Correo:</label>
+                                <input class="form-control" type="email" name="correo" required="" placeholder="institución@doe.com" />
                             </div>
                             <div class="form-group">
                                 <label for="direccion">Dirección:</label>
-                                <input class="form-control" type="text" id="direccion" required="" placeholder="carrera 1 # 2-29" />
+                                <input class="form-control" type="text" name="direccion" required="" placeholder="carrera 1 # 2-29" />
                             </div>
                             <div class="form-group">
-                                <label for="tel">Telefono:</label>
-                                <input class="form-control" type="tel" required="" id="tel" placeholder="Numero telefonico" />
+                                <label for="telefono">Telefono:</label>
+                                <input class="form-control" type="number" required="" name="telefono" placeholder="Numero telefonico" />
                             </div>
                             <!-- <div class="form-group">
                                 <div class="custom-control custom-checkbox">
@@ -306,7 +305,48 @@ require ('../assets/php/validaciones/secure_login.php');
         </div> <!-- // END .modal-dialog -->
     </div>
 
+    <!-- MODAL EDITAR INSTITUCION -->
+    <div id="modal-editar" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Editar Institución</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="px-3">
+
+                        <form action="#" class="was-validated" id="editar_institucion_form">
+                            <div id="content_modal_editar"></div>
+                        </form>
+                        
+                    </div>
+                </div> <!-- // END .modal-body -->
+            </div> <!-- // END .modal-content -->
+        </div> <!-- // END .modal-dialog -->
+    </div>
+
+    <!-- MODAL Eliminar INSTITUCION -->
+    <div id="modal-eliminar" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <div class="px-3">
+
+                        <h2 class="text-center mb-3" id="content_modal_eliminar"></h2>
+
+                        <input type="hidden" name="id_eliminar" id="id_eliminar">
+
+                        <button type="button" class="btn btn-danger" onclick="eliminar_institucion()">Eliminar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                         
+                    </div>
+                </div> <!-- // END .modal-body -->
+            </div> <!-- // END .modal-content -->
+        </div> <!-- // END .modal-dialog -->
+    </div>
+
     <?php include '../assets/php/layout/scripts.php'; ?>
+    <script src="js/peticiones.js"></script>
 
 
 </body>
