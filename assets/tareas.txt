@@ -1,3 +1,5 @@
 1. Agregar a validar login, la logica para darle acceso al acudiente.
  
  tarea completada.
+
+2. Hacer la vista del modulo SEDE y desarrollar el CRUD con AJAX
