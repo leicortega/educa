@@ -226,10 +226,10 @@
                                 <span class="sidebar-menu-text">Institución</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="admin-emails.html">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">email</i>
-                                <span class="sidebar-menu-text">Emails</span>
+                        <li class="sidebar-menu-item <?php echo ($_SERVER["REQUEST_URI"] == '/educa/user/sede.php') ? 'active' : ''; ?>">
+                            <a class="sidebar-menu-button" href="user/sede.php">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">school</i>
+                                <span class="sidebar-menu-text">Sedes</span>
                             </a>
                         </li>
                         <li class="sidebar-menu-item">
