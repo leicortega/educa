@@ -1,6 +1,9 @@
 <?php
 
 require ('../assets/php/validaciones/secure_login.php');
+require ('../assets/php/validaciones/conexion.php');
+
+$conexion = conexion();
 
 ?>
 
@@ -292,9 +295,20 @@ require ('../assets/php/validaciones/secure_login.php');
                             <div class="form-group">
                                 <label for="select01">Institución</label>
                                 <select id="select01" data-toggle="select" class="form-control">
-                                    <option selected="">My first option</option>
-                                    <option>Another option</option>
-                                    <option>Third option is here</option>
+                                    <option value="">Sleccione la Institucion</option>
+                                    <?php 
+
+                                        $sql = $conexion->prepare('SELECT * from institucion');
+                                        $sql->execute();
+
+                                        $datos = $sql->fetchAll();
+
+                                        foreach ($datos as $dato) { ?>
+                                            <option value="<?php echo $dato['id']; ?>"><?php echo $dato['nombre']; ?></option>
+                                        <?php }
+
+                                    ?>
+
                                 </select>
                              </div>
                             <!-- <div class="form-group">
