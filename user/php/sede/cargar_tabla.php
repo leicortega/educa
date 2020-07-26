@@ -4,8 +4,14 @@ require ('../../../assets/php/validaciones/conexion.php');
 
 $conexion = conexion();
 
+
+
+// preparamos la consulta 
 $sql = $conexion->prepare('SELECT * from sede');
+
+// ejecutamos la consulta
 $sql->execute();
+
 
 $datos = $sql->fetchAll();
 

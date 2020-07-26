@@ -221,13 +221,13 @@
                 <div class="sidebar-block p-0">
                     <ul class="sidebar-menu mt-0">
                         <li class="sidebar-menu-item <?php echo ($_SERVER["REQUEST_URI"] == '/educa/user/institucion.php') ? 'active' : ''; ?>">
-                            <a class="sidebar-menu-button" href="user/institucion.php">
+                            <a class="sidebar-menu-button" href="/educa/user/institucion.php">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">dvr</i>
                                 <span class="sidebar-menu-text">Institución</span>
                             </a>
                         </li>
                         <li class="sidebar-menu-item <?php echo ($_SERVER["REQUEST_URI"] == '/educa/user/sede.php') ? 'active' : ''; ?>">
-                            <a class="sidebar-menu-button" href="user/sede.php">
+                            <a class="sidebar-menu-button" href="/educa/user/sede.php">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">school</i>
                                 <span class="sidebar-menu-text">Sedes</span>
                             </a>
