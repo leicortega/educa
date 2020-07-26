@@ -289,6 +289,14 @@ require ('../assets/php/validaciones/secure_login.php');
                                 <label for="telefono">Telefono:</label>
                                 <input class="form-control" type="number" required="" name="telefono" placeholder="Numero telefonico" />
                             </div>
+                            <div class="form-group">
+                                <label for="select01">Institución</label>
+                                <select id="select01" data-toggle="select" class="form-control">
+                                    <option selected="">My first option</option>
+                                    <option>Another option</option>
+                                    <option>Third option is here</option>
+                                </select>
+                             </div>
                             <!-- <div class="form-group">
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="terms" />
