@@ -232,10 +232,10 @@
                                 <span class="sidebar-menu-text">Sedes</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="admin-chat.html">
-                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">comment</i>
-                                <span class="sidebar-menu-text">Chat</span>
+                        <li class="sidebar-menu-item <?php echo ($_SERVER["REQUEST_URI"] == '/educa/user/curso.php') ? 'active' : ''; ?>">
+                            <a class="sidebar-menu-button" href="/educa/user/curso.php">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">developer_board</i>
+                                <span class="sidebar-menu-text">Cursos</span>
                             </a>
                         </li>
                         <li class="sidebar-menu-item">
