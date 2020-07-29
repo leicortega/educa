@@ -294,7 +294,7 @@ $conexion = conexion();
                             </div>
                             <div class="form-group">
                                 <label for="select01">Institución</label>
-                                <select id="select01" data-toggle="select" class="form-control">
+                                <select id="select01" data-toggle="select" class="form-control" required>
                                     <option value="">Sleccione la Institucion</option>
                                     <?php 
 
