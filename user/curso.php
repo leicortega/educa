@@ -31,7 +31,7 @@ $conexion = conexion();
 
                     <div class="page__heading">
                         <div class="container-fluid page__container">
-                            <h1 class="mb-0">Sedes</h1>
+                            <h1 class="mb-0">Cursos</h1>
                         </div>
                     </div>
                     <div class="container-fluid page__container">
@@ -58,7 +58,7 @@ $conexion = conexion();
                                                 <button class="btn" type="button"><i class="material-icons">search</i></button>
                                             </div>
 
-                                            <table class="table mb-0 thead-border-top-0">
+                                            <!-- <table class="table mb-0 thead-border-top-0">
                                                 <thead>
                                                     <tr>
                                                         <th>Nombre</th>
@@ -71,7 +71,7 @@ $conexion = conexion();
                                                 <tbody class="list" id="staff02">
                                                     
                                                 </tbody>
-                                            </table>
+                                            </table> -->
                                         </div>
 
                                     </div>
@@ -295,7 +295,7 @@ $conexion = conexion();
                             <div class="form-group">
                                 <label for="select01">Institución</label>
                                 <select id="select01" name="id_institucion" data-toggle="select" class="form-control">
-                                    <option value="">Seleccione la Institucion</option>
+                                    <option value="">Sleccione la Institucion</option>
                                     <?php 
 
                                         $sql = $conexion->prepare('SELECT * from institucion');
