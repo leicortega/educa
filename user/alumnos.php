@@ -5,16 +5,6 @@ require ('../assets/php/validaciones/conexion.php');
 
 $conexion = conexion();
 
-$password = generar();
-$clave = MD5($password);
-function generar($es = 6){
-    $pass = array();
-    for($i = 1; $i < $es; $i++){
-        $pass[] = chr(mt_rand(32, 126));
-    }
-    return implode($pass);
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -310,15 +300,11 @@ function generar($es = 6){
                             </div>
                             <div class="form-group">
                                 <label for="telefono">Telefono:</label>
-                                <input class="form-control" type="number"  placeholder="Numero telefonico" />
+                                <input class="form-control" type="number" name="telefono" placeholder="Numero telefonico" />
                             </div>
                             <div class="form-group">
                                 <label for="identificacion">Identificación:</label>
                                 <input class="form-control" type="number" name="identificacion" required="" placeholder="Identificación estudiante" />
-                            </div>
-                            <div class="form-group">
-                                <!-- <label for="password">Contraseña:</label> -->
-                                <input class="form-control" type="hidden" name="password" required="" value="<?php echo $clave; ?>" />
                             </div>
                             <div class="form-group">
                                 <label for="select01">Sede</label>

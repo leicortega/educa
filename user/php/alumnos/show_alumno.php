@@ -13,7 +13,7 @@ foreach ($datos as $row) { ?>
     
     <div class="form-group">
         <label for="nombre">Nombre:</label>
-         <input class="form-control" type="text" name="nombre" required="" value="<?php echo $row['nombre']; ?>" />
+        <input class="form-control" type="text" name="nombre" required="" value="<?php echo $row['nombre']; ?>" />
     </div>
     <div class="form-group">
         <label for="apellido">Apellido:</label>
@@ -33,15 +33,11 @@ foreach ($datos as $row) { ?>
     </div>
     <div class="form-group">
         <label for="telefono">Telefono:</label>
-        <input class="form-control" type="number"  value="<?php echo $row['telefono']; ?>" />
+        <input class="form-control" type="number" name="telefono" value="<?php echo $row['telefono']; ?>" />
     </div>
     <div class="form-group">
         <label for="identificacion">Identificación:</label>
         <input class="form-control" type="number" name="identificacion" required="" value="<?php echo $row['identificacion']; ?>" />
-    </div>
-    <div class="form-group">
-        <!-- <label for="password">Contraseña:</label> -->
-        <input class="form-control" type="hidden" name="password" required="" value="<?php echo $row['password']; ?>" />
     </div>
     <div class="form-group">
         <label for="select01">Sede</label>
@@ -55,13 +51,15 @@ foreach ($datos as $row) { ?>
                 $datos = $sql->fetchAll();
 
                 foreach ($datos as $dato) { ?>
-                    <option value="<?php echo $dato['id']; ?>"><?php echo $dato['nombre']; ?></option>
+                    <option value="<?php echo $dato['id']; ?>" <?php echo ($dato['id'] == $row['id_sede']) ? 'selected' : '' ?>><?php echo $dato['nombre']; ?></option>
                 <?php }
 
             ?>
 
         </select>
     </div>
+
+    <input class="form-control" type="hidden" name="id" required="" value="<?php echo $row['id']; ?>" />
                             
     <div class="form-group text-center">
         <button class="btn btn-primary" type="submit">Agregar Estudiante</button>

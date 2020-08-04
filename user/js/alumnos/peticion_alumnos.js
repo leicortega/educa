@@ -10,6 +10,7 @@ $(document).ready(function () {
             type: 'POST',
             data: $('#registrar_alumno_form').serialize(),
             success: function (data) {
+                console.log(data)
                 if (data == 1) {
                     $('#sede-alert').removeClass('d-none').removeClass('bg-danger').addClass('bg-success')
                     $('#content-alert').text('CORRECTO - El alumno se registro correctamente')

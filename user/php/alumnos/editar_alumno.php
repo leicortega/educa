@@ -13,10 +13,9 @@ $sql->bindParam(':direccion', $_POST['direccion']);
 $sql->bindParam(':telefono', $_POST['telefono']);
 $sql->bindParam(':correo', $_POST['correo']);
 $sql->bindParam(':identificacion', $_POST['identificacion']);
-$sql->bindParam(':password', $_POST['password']);
 $sql->bindParam(':id_sede', $_POST['id_sede']);
+$sql->bindParam(':id', $_POST['id']);
 $sql->execute();
-
 
 $datos = $sql->rowCount();
 
