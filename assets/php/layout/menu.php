@@ -244,6 +244,24 @@
                                 <span class="sidebar-menu-text">Cursos</span>
                             </a>
                         </li>
+                        <li class="sidebar-menu-item <?php echo ($_SERVER["REQUEST_URI"] == '/educa/user/alumnos.php') ? 'active' : ''; ?>">
+                            <a class="sidebar-menu-button" href="/educa/user/alumnos.php">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">face</i>
+                                <span class="sidebar-menu-text">Alumnos</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item <?php echo ($_SERVER["REQUEST_URI"] == '/educa/user/profesores.php') ? 'active' : ''; ?>">
+                            <a class="sidebar-menu-button" href="/educa/user/profesores.php">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">people</i>
+                                <span class="sidebar-menu-text">Profesores</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item <?php echo ($_SERVER["REQUEST_URI"] == '/educa/user/acuidente.php') ? 'active' : ''; ?>">
+                            <a class="sidebar-menu-button" href="/educa/user/acuidente.php">
+                                <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">wc</i>
+                                <span class="sidebar-menu-text">Acudientes</span>
+                            </a>
+                        </li>
                         <li class="sidebar-menu-item">
                             <a class="sidebar-menu-button" href="admin-tickets.html">
                                 <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">local_offer</i>

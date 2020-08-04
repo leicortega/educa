@@ -1,0 +1,34 @@
+<?php 
+
+// requerimos la conexion con la base de datos
+require ('../../../assets/php/validaciones/conexion.php');
+
+// llamar la conexion
+$conexion = conexion();
+
+//preparar la consulta
+$sql = $conexion->prepare('SELECT * from alumnos');
+
+// ejecutar la consulta
+$sql->execute();
+
+//pasar los datos a fetchAll
+$datos = $sql->fetchAll();
+
+// mostrar los datos en una tabla
+foreach ($datos as $row) { ?>
+    <tr>
+    <td>
+        <span class="js-lists-values-employee-name"><?php echo $row['nombre']; ?></span>
+    </td>
+    <td><span class="js-lists-values-employee-name"><?php echo $row['apellido']; ?></span></td>
+    <td><span class="js-lists-values-employee-name"><?php echo $row['identificacion']; ?></span></td>
+    <td><span class="js-lists-values-employee-name"><?php echo $row['direccion']; ?></span></td>
+    <td><span class="js-lists-values-employee-name"><?php echo $row['correo']; ?></span></td>
+    <td><span class="js-lists-values-employee-name"><?php echo $row['telefono']; ?></span></td>
+    <td>
+        <button type="button" class="btn btn-warning" onclick="show_alumno(<?php echo $row['id']; ?>)"><i class="fa fa-pen"></i></button>
+        <button type="button" class="btn btn-danger" onclick="delete_alumno(<?php echo $row['id']; ?>, '<?php echo $row['nombre']; ?>')"><i class="fa fa-trash"></i></button>
+    </td>
+</tr>
+<?php } ?>
